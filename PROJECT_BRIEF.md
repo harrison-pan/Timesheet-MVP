@@ -21,7 +21,7 @@
 *   **Backend:**
     *   **Framework:** Spring Boot 4.0.0 (Java 25).
     *   **Security:** Spring Security 7 (OAuth2 Resource Server).
-    *   **Database:** PostgreSQL 18.1 (Dockerized).
+    *   **Database:** PostgreSQL 16 (Dockerized).
     *   **ORM:** Spring Data JPA 4.0.x.
     *   **Utils:** Apache Commons CSV (for export), Lombok.
 *   **Infrastructure:**
@@ -85,13 +85,13 @@
 
 **Copilot, please follow this execution order. Do not generate everything at once. Wait for my confirmation after each step.**
 
-*   **Step 1: Infrastructure & DB.** Generate the `docker-compose.yml` for Postgres and the `init.sql` schema script (including seed data for 3 users and 5 tasks).
-*   **Step 2: Backend Scaffold.** Generate the Spring Boot Project structure (Controller, Service, Repository packages) and the `SecurityConfig.java` + `JwtConverter.java` for Cognito.
-*   **Step 3: Backend API Implementation.** Generate the `TimesheetController` and `ApprovalController` with the Upsert and State Machine logic.
-*   **Step 4: Frontend Scaffold.** Generate the React Vite structure, `App.tsx` with Amplify Auth Wrapper, and `axios.ts` config.
-*   **Step 5: Frontend Grid Component.** Generate the `TimesheetGrid` component using HTML Tables (for performance) mapped to MUI styles.
+*   **Step 1: Frontend Scaffold & Pages.** Generate the React Vite structure, `App.tsx` with Amplify Auth Wrapper, `axios.ts` config, and scaffold all main pages (Timesheet Entry, Approval Dashboard).
+*   **Step 2: Frontend Grid Component.** Generate the `TimesheetGrid` component using HTML Tables (for performance) mapped to MUI styles.
+*   **Step 3: Infrastructure & DB.** Generate the `docker-compose.yml` for Postgres and the `init.sql` schema script (including seed data for 3 users and 5 tasks).
+*   **Step 4: Backend Scaffold.** Generate the Spring Boot Project structure (Controller, Service, Repository packages) and the `SecurityConfig.java` + `JwtConverter.java` for Cognito.
+*   **Step 5: Backend API Implementation.** Generate the `TimesheetController` and `ApprovalController` with the Upsert and State Machine logic.
 
 ---
 
 **Instruction to Copilot:**
-Read the above specification. Start by generating **Step 1** (Docker Compose & SQL).
+Read the above specification. Start by generating **Step 1** (Frontend Scaffold & Pages).
